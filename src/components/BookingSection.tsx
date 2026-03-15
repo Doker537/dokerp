@@ -44,20 +44,44 @@ const BookingSection = forwardRef<HTMLElement>((_, ref) => {
       .filter((a) => selectedAddOns.includes(a.id))
       .reduce((sum, a) => sum + a.price, 0);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !phone.trim()) {
       toast({ title: "Заполните все поля", variant: "destructive" });
       return;
     }
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    const selectedAddOnTitles = addOns
+      .filter((a) => selectedAddOns.includes(a.id))
+      .map((a) => a.title);
+
+    try {
+      const res = await fetch(
+        (import.meta.env.VITE_BOT_WEBHOOK_URL as string) || "/api/order",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name,
+            phone,
+            addOns: selectedAddOnTitles,
+            totalPrice,
+          }),
+        }
+      );
+
+      if (!res.ok) throw new Error("Network error");
+
       setName("");
       setPhone("");
       setSelectedAddOns([]);
       toast({ title: "Заявка отправлена!", description: "Я свяжусь с вами в ближайшее время." });
-    }, 1200);
+    } catch {
+      toast({ title: "Ошибка отправки", description: "Проверьте интернет или попробуйте позже.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

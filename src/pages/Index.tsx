@@ -20,7 +20,7 @@ const Index = () => {
       <BookingSection ref={bookingRef} />
 
       {/* CTA — Написать */}
-      <section className="py-20 md:py-28">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-6 md:px-12 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -59,6 +59,7 @@ const Index = () => {
         </div>
       </section>
 
+      <div className="border-t border-border" />
       <FooterSection />
       <FloatingContact />
     </main>
