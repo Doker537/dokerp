@@ -68,7 +68,10 @@ const BookingSection = forwardRef<HTMLElement>((_, ref) => {
         (import.meta.env.VITE_BOT_WEBHOOK_URL as string) || "/api/order",
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+           "Content-Type": "application/json",
+           "x-webhook-secret": "disjofihdsnjfnsjdfnjkds"
+          },
           body: JSON.stringify({
             name,
             phone,
