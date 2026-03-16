@@ -94,13 +94,7 @@ const PortfolioSection = ({ onBookClick }: { onBookClick: () => void }) => {
         ))}
 
         {/* Кнопка портфолио */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="flex justify-center -mt-8 md:-mt-16"
-        >
+        <div className="flex justify-center mt-4 pb-8">
           <a
             href="https://dokerphoto.ru/moi-raboty"
             target="_blank"
@@ -112,7 +106,7 @@ const PortfolioSection = ({ onBookClick }: { onBookClick: () => void }) => {
               <path d="M7 17L17 7M17 7H7M17 7v10" />
             </svg>
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
