@@ -32,11 +32,7 @@ const PortfolioItem = ({
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
-    <motion.div
-      ref={ref}
-      style={{ scale, opacity }}
-      className="mb-24 md:mb-40"
-    >
+    <motion.div ref={ref} style={{ scale, opacity }} className="mb-24 md:mb-40">
       <div
         className={`relative overflow-hidden rounded-lg ${
           index % 2 === 0 ? "md:ml-0 md:mr-[15%]" : "md:ml-[15%] md:mr-0"
@@ -45,14 +41,20 @@ const PortfolioItem = ({
         <img
           src={photo.src}
           alt={photo.title}
-          className="w-full object-cover transition-all duration-700 hover:scale-[1.03]"
+          className="w-full object-cover transition-all duration-700 md:hover:scale-[1.03]"
           style={{ aspectRatio: photo.aspect }}
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+
+        {/* Оверлей: на мобильном всегда виден, на десктопе — hover */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent
+          opacity-100 md:opacity-0 md:hover:opacity-100
+          transition-opacity duration-500 flex items-end p-6 md:p-8">
           <div className="flex items-end justify-between w-full">
             <div>
-              <p className="font-body text-xs text-muted-foreground uppercase tracking-widest mb-1">{photo.category}</p>
+              <p className="font-body text-xs text-muted-foreground uppercase tracking-widest mb-1">
+                {photo.category}
+              </p>
               <p className="font-display text-2xl text-foreground">{photo.title}</p>
             </div>
             <motion.button
@@ -90,6 +92,27 @@ const PortfolioSection = ({ onBookClick }: { onBookClick: () => void }) => {
         {photos.map((photo, i) => (
           <PortfolioItem key={i} photo={photo} index={i} onBookClick={onBookClick} />
         ))}
+
+        {/* Кнопка портфолио */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="flex justify-center -mt-8 md:-mt-16"
+        >
+          <a
+            href="https://dokerphoto.ru/moi-raboty"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 border border-border text-foreground px-8 py-4 rounded-full font-body font-medium text-base hover:border-muted-foreground transition-colors"
+          >
+            Портфолио полностью
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </a>
+        </motion.div>
       </div>
     </section>
   );

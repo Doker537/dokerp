@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Navbar from "@/components/Navbar";
 import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
@@ -7,22 +8,10 @@ import portfolio4 from "@/assets/portfolio-4.jpg";
 import portfolio5 from "@/assets/portfolio-5.jpg";
 
 const collages = [
-  {
-    title: "Портретная серия",
-    photos: [portfolio1, portfolio2, portfolio3, portfolio4],
-  },
-  {
-    title: "Лавстори & Пары",
-    photos: [portfolio2, portfolio5, portfolio1, portfolio3],
-  },
-  {
-    title: "Арт & Фэшн",
-    photos: [portfolio4, portfolio3, portfolio5, portfolio2],
-  },
-  {
-    title: "Семейные моменты",
-    photos: [portfolio5, portfolio1, portfolio4, portfolio3],
-  },
+  { title: "Портретная серия", photos: [portfolio1, portfolio2, portfolio3, portfolio4] },
+  { title: "Лавстори & Пары", photos: [portfolio2, portfolio5, portfolio1, portfolio3] },
+  { title: "Арт & Фэшн", photos: [portfolio4, portfolio3, portfolio5, portfolio2] },
+  { title: "Семейные моменты", photos: [portfolio5, portfolio1, portfolio4, portfolio3] },
 ];
 
 const CollageCard = ({
@@ -51,7 +40,10 @@ const CollageCard = ({
           </div>
         ))}
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+      {/* Оверлей: на мобильном всегда виден, на десктопе — hover */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent rounded-lg
+        opacity-100 md:opacity-0 md:group-hover:opacity-100
+        transition-opacity duration-500 flex items-end p-6">
         <p className="font-display text-2xl text-foreground">{collage.title}</p>
       </div>
     </div>
@@ -59,37 +51,16 @@ const CollageCard = ({
 );
 
 const Works = () => {
+  // На странице Works кнопка бронирования скроллит вниз к форме — но её тут нет,
+  // поэтому просто ведём на главную к форме
+  const goToBooking = () => {
+    window.location.href = "/#booking";
+  };
+
   return (
     <main className="bg-background min-h-screen">
-      {/* Nav */}
-      <motion.nav
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-0 left-0 right-0 z-40 py-5 px-6 md:px-12"
-      >
-        <div className="container mx-auto flex items-center justify-between">
-          <Link to="/" className="font-display text-xl text-foreground">
-            DokerPhoto
-          </Link>
-          <div className="flex items-center gap-8">
-            <Link
-              to="/"
-              className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Главная
-            </Link>
-            <Link
-              to="/works"
-              className="font-body text-sm text-foreground transition-colors"
-            >
-              Работы
-            </Link>
-          </div>
-        </div>
-      </motion.nav>
+      <Navbar onBookClick={goToBooking} />
 
-      {/* Content */}
       <div className="pt-32 pb-24 md:pb-40">
         <div className="container mx-auto px-6 md:px-12">
           <motion.div
@@ -151,7 +122,6 @@ const Works = () => {
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="border-t border-border py-12">
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
           <p className="font-display text-lg text-foreground">DokerPhoto</p>
