@@ -45,7 +45,7 @@ const Navbar = ({ onBookClick }: { onBookClick: () => void }) => {
             <a href="/works" className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">
               Работы
             </a>
-            <a href="#booking" className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="https://dokersale.ru/#booking" className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">
               Бронирование
             </a>
             <motion.button
@@ -86,7 +86,7 @@ const Navbar = ({ onBookClick }: { onBookClick: () => void }) => {
               <a href="/works" onClick={() => setMenuOpen(false)} className="font-body text-lg text-muted-foreground hover:text-foreground transition-colors">
                 Работы
               </a>
-              <a href="#booking" onClick={() => setMenuOpen(false)} className="font-body text-lg text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://dokersale.ru/#booking" onClick={() => setMenuOpen(false)} className="font-body text-lg text-muted-foreground hover:text-foreground transition-colors">
                 Бронирование
               </a>
               <a href="https://vk.com/dokerphoto" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="font-body text-lg text-muted-foreground hover:text-foreground transition-colors">
