@@ -1,17 +1,31 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+
+// Импортируем все 16 изображений
 import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
 import portfolio5 from "@/assets/portfolio-5.jpg";
+import portfolio6 from "@/assets/portfolio-6.jpg";
+import portfolio7 from "@/assets/portfolio-7.jpg";
+import portfolio8 from "@/assets/portfolio-8.jpg";
+import portfolio9 from "@/assets/portfolio-9.jpg";
+import portfolio10 from "@/assets/portfolio-10.jpg";
+import portfolio11 from "@/assets/portfolio-11.jpg";
+import portfolio12 from "@/assets/portfolio-12.jpg";
+import portfolio13 from "@/assets/portfolio-13.jpg";
+import portfolio14 from "@/assets/portfolio-14.jpg";
+import portfolio15 from "@/assets/portfolio-15.jpg";
+import portfolio16 from "@/assets/portfolio-16.jpg";
 
+// Распределяем 16 уникальных фотографий по 4 категориям
 const collages = [
   { title: "Портретная серия", photos: [portfolio1, portfolio2, portfolio3, portfolio4] },
-  { title: "Лавстори & Пары", photos: [portfolio2, portfolio5, portfolio1, portfolio3] },
-  { title: "Арт & Фэшн", photos: [portfolio4, portfolio3, portfolio5, portfolio2] },
-  { title: "Семейные моменты", photos: [portfolio5, portfolio1, portfolio4, portfolio3] },
+  { title: "Лавстори & Пары", photos: [portfolio5, portfolio6, portfolio7, portfolio8] },
+  { title: "Семейные моменты", photos: [portfolio9, portfolio10, portfolio11, portfolio12] },
+  { title: "Бизнес фотосессия", photos: [portfolio13, portfolio14, portfolio15, portfolio16] },
 ];
 
 const CollageCard = ({
