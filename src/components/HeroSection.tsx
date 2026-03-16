@@ -3,7 +3,7 @@ import heroPhoto from "@/assets/hero-photo.jpg";
 
 const HeroSection = ({ onBookClick }: { onBookClick: () => void }) => {
   return (
-    <section className="relative min-h-screen flex items-end pb-20 md:pb-32 overflow-hidden">
+    <section className="relative min-h-screen flex items-end pb-20 md:pb-32 overflow-hidden pt-20 md:pt-24">
       {/* Background image */}
       <div className="absolute inset-0">
         <img

@@ -89,6 +89,9 @@ const Navbar = ({ onBookClick }: { onBookClick: () => void }) => {
               <a href="#booking" onClick={() => setMenuOpen(false)} className="font-body text-lg text-muted-foreground hover:text-foreground transition-colors">
                 Бронирование
               </a>
+              <a href="https://vk.com/dokerphoto" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="font-body text-lg text-muted-foreground hover:text-foreground transition-colors">
+                ВКонтакте
+              </a>
               <button
                 onClick={handleBookClick}
                 className="font-body text-base bg-accent text-accent-foreground px-6 py-3 rounded-full font-medium w-full text-center mt-2"

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 
 // Импортируем все 16 изображений в формате webp
@@ -65,11 +64,8 @@ const CollageCard = ({
 );
 
 const Works = () => {
-  const navigate = useNavigate();
-
-  // Правильный переход в React Router
   const goToBooking = () => {
-    navigate("/#booking");
+    window.location.href = "/#booking";
   };
 
   return (

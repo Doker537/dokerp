@@ -12,6 +12,14 @@ const FooterSection = () => {
 
           <div className="flex items-center gap-6">
             <a
+              href="https://vk.com/dokerphoto"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              ВКонтакте
+            </a>
+            <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
