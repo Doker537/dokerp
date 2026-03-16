@@ -323,7 +323,7 @@ const BookingSection = forwardRef<HTMLElement>((_, ref) => {
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: -8 }}
                           transition={{ duration: 0.25 }}
-                          className="font-display text-lg text-muted-foreground/50 tabular-nums line-through"
+                          className="font-display text-2xl text-muted-foreground/60 tabular-nums decoration-muted-foreground/60 decoration-2 line-through"
                         >
                           {priceBeforeDiscount.toLocaleString("ru-RU")} ₽
                         </motion.p>
