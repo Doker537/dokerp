@@ -19,8 +19,23 @@ const Index = () => {
       <HeroSection onBookClick={scrollToBooking} />
       <BookingSection ref={bookingRef} />
 
+      {/* Кнопка портфолио */}
+      <div className="flex justify-center py-6">
+        <a
+          href="https://dokerphoto.ru/moi-raboty"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 border border-border text-foreground px-8 py-4 rounded-full font-body font-medium text-base hover:border-muted-foreground transition-colors"
+        >
+          Портфолио полностью
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M7 17L17 7M17 7H7M17 7v10" />
+          </svg>
+        </a>
+      </div>
+
       {/* CTA — Написать */}
-      <section className="py-12 md:py-16">
+      <section className="py-8 md:py-10">
         <div className="container mx-auto px-6 md:px-12 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

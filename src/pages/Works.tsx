@@ -83,6 +83,21 @@ const Works = () => {
             ))}
           </div>
 
+          {/* Кнопка портфолио */}
+          <div className="flex justify-center mt-10 mb-16 md:mb-24">
+            <a
+              href="https://dokerphoto.ru/moi-raboty"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-border text-foreground px-8 py-4 rounded-full font-body font-medium text-base hover:border-muted-foreground transition-colors"
+            >
+              Портфолио полностью
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+          </div>
+
           {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
