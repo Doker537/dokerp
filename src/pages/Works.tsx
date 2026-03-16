@@ -2,23 +2,23 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 
-// Импортируем все 16 изображений
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
-import portfolio7 from "@/assets/portfolio-7.jpg";
-import portfolio8 from "@/assets/portfolio-8.jpg";
-import portfolio9 from "@/assets/portfolio-9.jpg";
-import portfolio10 from "@/assets/portfolio-10.jpg";
-import portfolio11 from "@/assets/portfolio-11.jpg";
-import portfolio12 from "@/assets/portfolio-12.jpg";
-import portfolio13 from "@/assets/portfolio-13.jpg";
-import portfolio14 from "@/assets/portfolio-14.jpg";
-import portfolio15 from "@/assets/portfolio-15.jpg";
-import portfolio16 from "@/assets/portfolio-16.jpg";
+// Импортируем все 16 изображений в формате webp
+import portfolio1 from "@/assets/portfolio-1.webp";
+import portfolio2 from "@/assets/portfolio-2.webp";
+import portfolio3 from "@/assets/portfolio-3.webp";
+import portfolio4 from "@/assets/portfolio-4.webp";
+import portfolio5 from "@/assets/portfolio-5.webp";
+import portfolio6 from "@/assets/portfolio-6.webp";
+import portfolio7 from "@/assets/portfolio-7.webp";
+import portfolio8 from "@/assets/portfolio-8.webp";
+import portfolio9 from "@/assets/portfolio-9.webp";
+import portfolio10 from "@/assets/portfolio-10.webp";
+import portfolio11 from "@/assets/portfolio-11.webp";
+import portfolio12 from "@/assets/portfolio-12.webp";
+import portfolio13 from "@/assets/portfolio-13.webp";
+import portfolio14 from "@/assets/portfolio-14.webp";
+import portfolio15 from "@/assets/portfolio-15.webp";
+import portfolio16 from "@/assets/portfolio-16.webp";
 
 // Распределяем 16 уникальных фотографий по 4 категориям
 const collages = [
