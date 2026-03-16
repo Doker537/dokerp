@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 
 // Импортируем все 16 изображений в формате webp
@@ -65,10 +65,11 @@ const CollageCard = ({
 );
 
 const Works = () => {
-  // На странице Works кнопка бронирования скроллит вниз к форме — но её тут нет,
-  // поэтому просто ведём на главную к форме
+  const navigate = useNavigate();
+
+  // Правильный переход в React Router
   const goToBooking = () => {
-    window.location.href = "/#booking";
+    navigate("/#booking");
   };
 
   return (
@@ -125,7 +126,7 @@ const Works = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="https://wa.me/79935844456"
+                href="https://wa.me/79991234567"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-body font-medium text-sm hover:opacity-90 transition-opacity"
@@ -136,7 +137,7 @@ const Works = () => {
                 Написать в WhatsApp
               </a>
               <a
-                href="https://t.me/whats8979"
+                href="https://t.me/photographer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-body font-medium text-sm hover:opacity-90 transition-opacity"
