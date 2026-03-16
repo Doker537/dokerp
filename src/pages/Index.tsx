@@ -1,4 +1,4 @@
-import { useRef, useCallback } from "react";
+import { useRef, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -13,11 +13,26 @@ const Index = () => {
     bookingRef.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
+  // Этот блок проверяет ссылку при загрузке страницы. 
+  // Если мы пришли с другой страницы по ссылке /#booking, он прокрутит вниз.
+  useEffect(() => {
+    if (window.location.hash === "#booking") {
+      // Небольшая задержка нужна, чтобы компоненты страницы успели появиться на экране
+      setTimeout(() => {
+        scrollToBooking();
+      }, 150);
+    }
+  }, [scrollToBooking]);
+
   return (
     <main className="bg-background min-h-screen">
       <Navbar onBookClick={scrollToBooking} />
       <HeroSection onBookClick={scrollToBooking} />
-      <BookingSection ref={bookingRef} />
+      
+      {/* Обернули в id="booking" для страховки */}
+      <div id="booking">
+        <BookingSection ref={bookingRef} />
+      </div>
 
       {/* Кнопка портфолио */}
       <div className="flex justify-center py-4">
