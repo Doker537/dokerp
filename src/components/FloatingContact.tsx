@@ -16,7 +16,7 @@ const FloatingContact = () => {
             className="glass-surface rounded-2xl p-4 flex flex-col gap-2 mb-2 min-w-[200px]"
           >
             <a
-              href="https://wa.me/79991234567"
+              href="https://wa.me/79935844456"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-3 rounded-xl hover:bg-secondary transition-colors"
@@ -27,7 +27,7 @@ const FloatingContact = () => {
               <span className="font-body text-sm text-foreground">WhatsApp</span>
             </a>
             <a
-              href="https://t.me/photographer"
+              href="https://t.me/whats8979"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-3 rounded-xl hover:bg-secondary transition-colors"

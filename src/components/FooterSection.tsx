@@ -20,7 +20,7 @@ const FooterSection = () => {
               Instagram
             </a>
             <a
-              href="https://t.me/photographer"
+              href="https://t.me/whats8979"
               target="_blank"
               rel="noopener noreferrer"
               className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
