@@ -12,15 +12,15 @@ interface AddOn {
 const addOns: AddOn[] = [
   {
     id: "assistant",
-    title: "Ассистент по свету",
-    price: 5000,
-    description: "Для сложных локаций и журнального эффекта",
+    title: "Ассистент",
+    price: 1000,
+    description: "Ассистент показывает кадры на экране и помогает корректировать съемку.",
   },
   {
     id: "print",
-    title: "Печать в рамах",
-    price: 8000,
-    description: "3 отпечатка 30×40 в деревянных рамах",
+    title: "Печать в рамке",
+    price: 1000,
+    description: "Фотография в рамке 21х30",
   },
 ];
 
