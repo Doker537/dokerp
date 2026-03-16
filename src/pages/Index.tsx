@@ -20,7 +20,7 @@ const Index = () => {
       <BookingSection ref={bookingRef} />
 
       {/* Кнопка портфолио */}
-      <div className="flex justify-center py-6">
+      <div className="flex justify-center py-4">
         <a
           href="https://dokerphoto.ru/moi-raboty"
           target="_blank"

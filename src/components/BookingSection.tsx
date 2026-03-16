@@ -85,7 +85,7 @@ const BookingSection = forwardRef<HTMLElement>((_, ref) => {
   };
 
   return (
-    <section ref={ref} id="booking" className="py-24 md:py-40">
+    <section ref={ref} id="booking" className="py-12 md:py-40">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left */}
@@ -196,7 +196,7 @@ const BookingSection = forwardRef<HTMLElement>((_, ref) => {
               </div>
 
               {/* Price */}
-              <div className="pt-4 border-t border-border flex items-end justify-between">
+              <div className="pt-4 border-t border-border flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
                 <div>
                   <p className="font-body text-xs text-muted-foreground mb-1">Итого от</p>
                   <AnimatePresence mode="wait">
@@ -218,7 +218,7 @@ const BookingSection = forwardRef<HTMLElement>((_, ref) => {
                   disabled={isSubmitting}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="bg-accent text-accent-foreground px-8 py-4 font-body font-medium rounded-full text-base disabled:opacity-50 transition-opacity"
+                  className="w-full sm:w-auto bg-accent text-accent-foreground px-8 py-4 font-body font-medium rounded-full text-base disabled:opacity-50 transition-opacity"
                 >
                   {isSubmitting ? "Отправляю..." : "Забронировать дату"}
                 </motion.button>
