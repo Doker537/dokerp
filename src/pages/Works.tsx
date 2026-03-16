@@ -125,7 +125,7 @@ const Works = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="https://wa.me/79991234567"
+                href="https://wa.me/79935844456"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-body font-medium text-sm hover:opacity-90 transition-opacity"
@@ -136,7 +136,7 @@ const Works = () => {
                 Написать в WhatsApp
               </a>
               <a
-                href="https://t.me/photographer"
+                href="https://t.me/whats8979"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-body font-medium text-sm hover:opacity-90 transition-opacity"
