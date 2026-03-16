@@ -73,7 +73,7 @@ const CollageCard = ({ collage, index }: { collage: (typeof collages)[0]; index:
 const Works = () => {
   // Переходим на главную с якорем — используем location.origin чтобы всегда был правильный домен
   const goToBooking = () => {
-    window.location.href = window.location.origin + "/#booking";
+    window.location.href = "https://dokersale.ru/#booking";
   };
 
   return (
