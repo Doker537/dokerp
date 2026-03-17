@@ -39,29 +39,16 @@ const HeroSection = ({ onBookClick }: { onBookClick: () => void }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col sm:flex-row gap-4 items-start mt-2"
+            className="flex flex-col sm:flex-row gap-4 items-start"
           >
-            {/* Обертка для позиционирования плашки */}
-            <div className="relative">
-              {/* Анимированная плашка со скидкой */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8, rotate: 0 }}
-                animate={{ opacity: 1, scale: 1, rotate: 6 }}
-                transition={{ delay: 1.2, type: "spring", stiffness: 200, damping: 10 }}
-                className="absolute -top-4 -right-3 md:-right-6 z-20 bg-white text-black text-[11px] md:text-xs font-bold px-3 py-1 rounded-full shadow-xl border border-black/5 pointer-events-none"
-              >
-                Скидка до 23.03 🔥
-              </motion.div>
-
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={onBookClick}
-                className="bg-accent text-accent-foreground px-8 py-4 font-body font-medium rounded-full text-base relative z-10"
-              >
-                Забронировать дату
-              </motion.button>
-            </div>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={onBookClick}
+              className="bg-accent text-accent-foreground px-8 py-4 font-body font-medium rounded-full text-base"
+            >
+              Забронировать дату
+            </motion.button>
 
             <a
               href="/works"
